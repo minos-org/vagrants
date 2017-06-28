@@ -1,0 +1,17 @@
+About
+-----
+
+[Vagrant](https://www.vagrantup.com/) is a tool for deploying software environments in a configurable and reproducible form. Because the VM deployment is reproducible it makes possible to have the same exact environment across multiple machines, thus eliminating the problems caused by differences in system configuration both across teams and infrastructure. With a single command, `vagrant up`, it becomes possible to deploy a whole environment in just a few minutes. This repository contain the recipes to build the official minos images for the vagrant platform.
+
+Usage
+-----
+
+    $ cd folder
+    $ ./provision/repackage-vagrant-box.sh
+    # upload the generated *.box image
+
+Dependencies
+------------
+
+- [Vagrant](https://www.vagrantup.com/)
+- [Virtualbox](https://www.virtualbox.org)
