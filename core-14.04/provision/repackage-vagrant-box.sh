@@ -26,7 +26,7 @@ vagrant ssh -- '
 for dir in ~/* /vagrant/*; do
     [ ! -d "${dir}/provision/" ] && continue
     for script in "${dir}"/provision/repackage-[0-9]*.sh; do
-        echo "Running ${script} ..."
+        printf "%b\\n" "\033[1mRunning ${script} ... \033[0m"
         "${script}"
     done
 done
