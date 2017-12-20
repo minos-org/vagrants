@@ -9,7 +9,7 @@ hosts = [
     #10.10.10.1 is configured as bridged between the host and 10.10.1.x guests
     {
         :name  => "#{DIRNAME}.example.com",
-        :box   => "minos/core-16.04",
+        :box   => "minos/desktop-16.04",
         :ram   => "512", :cpus  => "1",
         :ip    => "10.10.10.11",
     },
@@ -41,8 +41,9 @@ host_counter = 0; Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
             #machine.vm.network "forwarded_port", guest: 80,   host: 8080, auto_correct: true, id:"httpd"
 
             machine.vm.provider "virtualbox" do |vbox|
-                vbox.name = host[:name]
+                vbox.name         = host[:name]
                 vbox.linked_clone = true
+                vbox.gui          = true
                 vbox.customize ["modifyvm", :id, "--memory", host[:ram] || default_ram ]          #MB
                 vbox.customize ["modifyvm", :id, "--cpuexecutioncap", host[:cpu] || default_cpu ] #%
                 vbox.customize ["modifyvm", :id, "--cpus", host[:cpus] || default_cpus ]
