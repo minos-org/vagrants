@@ -15,7 +15,7 @@ hosts = [
     },
 ]
 
-#raise "vagrant-hostmanager plugin must be installed: $ vagrant plugin install vagrant-hostmanager" unless Vagrant.has_plugin? "vagrant-hostmanager"
+#raise "vagrant-hostmanager-ext plugin must be installed: $ vagrant plugin install vagrant-hostmanager-ext" unless Vagrant.has_plugin? "vagrant-hostmanager-ext"
 
 host_os  = RbConfig::CONFIG['host_os']
 if host_os =~ /linux/
