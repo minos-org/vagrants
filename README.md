@@ -6,7 +6,7 @@ Recipes to use the official minos images for the [vagrant](https://www.vagrantup
 Usage
 -----
 
-    $ cd core-16.04
+    $ cd core-18.04
     $ vagrant up && vagrant ssh
 
 Dependencies
